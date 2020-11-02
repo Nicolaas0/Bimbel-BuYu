@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Class and schedule</title>
+        <link href="assest/formcourses/style.css" rel="stylesheet" />
+        <link href="assest/formcourses/assest/css/responsive.css" rel="stylesheet" />
+        <!--====== FAVICON ICON =======-->
+        <link rel="shortcut icon" type="image/ico" href="assest/img/favicon.png" />
+        <!--====== MAIN STYLESHEETS ======-->
+        <link href="assest/formcourses/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assest/formcourses/main-after-form.css" />
+        <link rel="stylesheet" href="assest/formcourses/assest/css/student-table.scss" />
+        <link href="assest/formcourses/assest/css/responsive.css" rel="stylesheet" />
+        <link href="assest/formcourses/assest/css/plugins.css" rel="stylesheet" />
+        <link href="assest/formcourses/assest/css/theme.css" rel="stylesheet" />
+        <link href="assest/formcourses/assest/css/icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assest/formcourses/assest/css/plugins/button-3d.css" />
+
+        <script src="assest/formcourses/assest/js/vendor/modernizr-2.8.3.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&amp;display=swap" rel="stylesheet" />
+    </h:head>
+
+    <h:body>
+        <!--- PRELOADER -->
+
+        <div class="preeloader">
+
+            <div class="preloader-spinner" />
+        </div>
+        <header>
+
+            <div class="header-top-area" id="scroolup">
+
+                <div class="mainmenu-area" id="mainmenu-area">
+
+                    <div class="mainmenu-area-bg" />
+                    <nav class="navbar">
+
+                        <div class="container">
+
+                            <div class="navbar-header">
+                                
+                            </div>
+
+                            <div id="main-nav" class="stellarnav">
+
+                                <ul id="nav" class="nav navbar-nav pull-right">
+
+                                    <li class="active"><h:link outcome="homepage_1.xhtml">Home</h:link></li>
+
+                                    <li><h:link outcome="homepage_1.xhtml">Features</h:link></li>
+
+                                    <li class="active"><h:link outcome="courses.xhtml">Courses</h:link></li>
+
+                                    <li><h:link outcome="homepage_1.xhtml">Blog</h:link></li>
+
+                                    <li><h:link outcome="homepage_1.xhtml">Faqs</h:link></li>
+
+                                    <li><h:link outcome="homepage_1.xhtml">Contact</h:link></li>
+
+                                    <li><h:link outcome="homepage.xhtml">LOGOUT</h:link></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <h:outputStylesheet>
+            .table1 {
+            border-collapse: collapse;
+            width: 30%;
+            position: absolute;
+            top: 160px;
+            left: 400px;
+            }
+            .table2 {
+            border-collapse: collapse;
+            width: 30%;
+            position: absolute;
+            top: 180px;
+            left: 60px;
+            }
+
+            th, td {
+            padding: 30px 50px;
+            text-align: left;
+            border-bottom: 1px solid rgb(143, 255, 115);
+            font-family: 'Bree Serif', serif;
+            color: black;
+            font-size:15px;
+            }
+        </h:outputStylesheet>
+
+            
+                <div id="h-class">YOUR CLASS AND SCHEDULE </div>
+                
+        <div class="table2">
+
+            <h:dataTable value = "#{regist.getallrecords()}" var = "r"
+                         styleClass = "table2">
+                <h:column>    				
+                    <f:facet name = "header">ID</f:facet>    				
+                        #{r.id}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Nama</f:facet>
+                        #{r.name}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">From</f:facet>
+                        #{r.univ}
+                </h:column>
+</h:dataTable>
+        </div>
+
+
+        <div class="table1">
+
+            <h:dataTable value = "#{jadwal.getallrecords()}" var = "j"
+                         styleClass = "table1">
+                <h:column>    				
+                    <f:facet name = "header">Hari</f:facet>    				
+                        #{j.hari}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Jam</f:facet>
+                        #{j.jam}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Media</f:facet>
+                        #{j.media}
+                </h:column>
+</h:dataTable>
+        </div>
+                <h:button id="b-table" class="big-button" value="See you at class!" outcome="homepage_1.xhtml"></h:button>   
+
+        <!--====== SCRIPTS JS ======-->
+
+        <script src="assest/formcourses/assest/js/vendor/jquery-1.12.4.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/vendor/bootstrap.min.js"></script>
+        <!--====== PLUGINS JS ======-->
+
+        <script src="assest/formcourses/assest/js/vendor/jquery.easing.1.3.js"></script>
+
+        <script src="assest/formcourses/assest/js/vendor/jquery-migrate-1.2.1.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/vendor/jquery.appear.js"></script>
+
+        <script src="assest/formcourses/assest/js/owl.carousel.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/stellar.js"></script>
+
+        <script src="assest/formcourses/assest/js/waypoints.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/jquery.counterup.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/wow.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/jquery-modal-video.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/stellarnav.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/placeholdem.min.js"></script>
+
+        <script src="assest/formcourses/assest/js/contact-form.js"></script>
+
+        <script src="assest/formcourses/assest/js/jquery.ajaxchimp.js"></script>
+
+        <script src="assest/formcourses/assest/js/jquery.sticky.js"></script>
+        <!--===== ACTIVE JS=====-->
+
+        <script src="assest/formcourses/assest/js/main.js"></script>
+
+    </h:body></html>

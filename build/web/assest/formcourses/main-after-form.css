@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap');
+
+.navbar{
+    background: #000000;
+}
+
+#b-table{
+    position: absolute;
+    top: 1000px;
+    margin-bottom: 80px;
+}
+
+#h-class{
+    font-size: 50px;
+    color: black;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: absolute;
+    bottom: 400px;
+}

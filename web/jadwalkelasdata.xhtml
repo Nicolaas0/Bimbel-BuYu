@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assest/admincss/main-signupdata.css" />
+
+        <title>Jadwal Kelas Data</title>
+    </h:head>
+
+    <h:body><h:outputStylesheet>
+            .table {
+            border-collapse: collapse;
+            width: 30%;
+            position: absolute;
+            top:20px;
+            left: 80px;
+            }
+
+            th, td {
+            padding: 30px 50px;
+            text-align: left;
+            border-bottom: 1px solid rgb(143, 255, 115);
+            font-family: 'Bree Serif', serif;
+            color: black;
+            font-size:15px;
+            font-family: 'Heebo', sans-serif;
+            }
+        </h:outputStylesheet>
+
+        <div class="table">
+
+            <h:dataTable value = "#{jadwal.getallrecords()}" var = "j"
+                         styleClass = "table">
+                <h:column>    				
+                    <f:facet name = "header">ID</f:facet>    				
+                        #{j.id}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Hari</f:facet>
+                        #{j.hari}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Jam</f:facet>
+                        #{j.jam}
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">Media</f:facet>
+                        #{j.media}
+                </h:column>
+            </h:dataTable>
+        </div>
+        <h:form>
+            <div class="delete">
+                <label for="">Delete</label><br />
+                <label for="">ID</label>
+                <h:inputText value="#{jadwal.id}"/><br />
+                <h:commandButton value="Delete" action="#{jadwal.delete()}"></h:commandButton>
+            </div>
+        </h:form>
+        <h:form>
+            <div class="update">
+                <label for="">Update</label><br />
+                <label for="" >ID</label>
+                <h:inputText  value="#{jadwal.id}" /><br />
+                <h:commandButton action="#{jadwal.getbyid()}" value="Show"></h:commandButton><br />
+                <label for="">Hari</label>
+                <h:inputText  value="#{jadwal.hari}" /><br />
+                <label for="">Jam</label>
+                <h:inputText  value="#{jadwal.jam}" /><br />
+                <label for="">Media</label>
+                <h:inputText  value="#{jadwal.media}" /><br />
+                <h:commandButton value="Update" action="#{jadwal.update()}"></h:commandButton>
+            </div>
+        </h:form>
+        <h:button value="Back" outcome="adminmenu.xhtml"></h:button>
+
+    </h:body></html>
+

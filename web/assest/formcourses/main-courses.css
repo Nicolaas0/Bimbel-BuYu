@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar{
+    background: #000000;
+}
+
+/* elements of the content */
+
+#h-crs{
+    position: absolute;
+    color: black;
+    position: absolute;
+    top: 150px;
+    left: 37%;
+    font-family: 'Heebo', sans-serif;
+    font-size: 55px;
+}
+/* WEB */
+#h-web{
+    font-family: 'Heebo', sans-serif;
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    color: #000000;
+    font-size: 50px;
+}
+
+#img-web{
+    position: absolute;
+    width: 20%;
+    top: 210px;
+    left: 210px;
+}
+
+#img2-web{
+    width: 100px;
+    position: absolute;
+    top: 660px;
+    left: 110px;
+}
+
+#img3-web{
+    width: 120px;
+    position: absolute;
+    top: 650px;
+    left: 200px;
+}
+
+#img4-web{
+    width: 120px;
+    position: absolute;
+    top: 650px;
+    left: 300px;
+}
+
+#img5-web{
+    width: 120px;
+    position: absolute;
+    top: 650px;
+    left: 410px;
+}
+
+#p-web{
+    position: absolute;
+    top:590px;
+    font-family: 'Arimo', sans-serif;
+    color: black;
+    font-size: 25px;
+    left: 200px;
+    font-family: 'Pacifico', cursive;
+}
+
+#b-web{
+    position:absolute;
+    top: 790px;
+    right: 970px;
+}
+
+/* APP */
+
+#h-app{
+    font-family: 'Heebo', sans-serif;
+    position: absolute;
+    top: 500px;
+    left: 750px;
+    color: #000000;
+    font-size: 50px;
+}
+
+#img-app{
+    position: absolute;
+    width: 20%;
+    top: 210px;
+    left: 840px;
+}
+
+#img2-app{
+    width: 90px;
+    position: absolute;
+    top: 640px;
+    left: 800px;
+}
+
+#img3-app{
+    width: 120px;
+    position: absolute;
+    top: 650px;
+    left: 910px;
+}
+
+#img4-app{
+    width: 130px;
+    position: absolute;
+    top: 670px;
+    left: 1040px;
+}
+
+#p-app{
+    position: absolute;
+    top:590px;
+    font-family: 'Arimo', sans-serif;
+    color: black;
+    font-size: 25px;
+    left: 860px;
+    font-family: 'Pacifico', cursive;
+}
+
+#b-app{
+    position:absolute;
+    top: 790px;
+    right: 280px;
+}
+
+/* IoT */
+
+#h-iot{
+    font-family: 'Heebo', sans-serif;
+    position: absolute;
+    top: 1150px;
+    left: 420px;
+    color: #000000;
+    font-size: 50px;
+}
+
+#img-iot{
+    position: absolute;
+    width: 20%;
+    top: 860px;
+    left: 540px;
+}
+
+#img2-iot{
+    width: 90px;
+    position: absolute;
+    top: 1290px;
+    left: 500px;
+}
+
+#img3-iot{
+    width: 120px;
+    position: absolute;
+    top: 1300px;
+    left: 610px;
+}
+
+#img4-iot{
+    width: 130px;
+    position: absolute;
+    top: 1320px;
+    left: 740px;
+}
+
+#p-iot{
+    position: absolute;
+    top:1230px;
+    font-family: 'Arimo', sans-serif;
+    color: black;
+    font-size: 25px;
+    left: 560px;
+    font-family: 'Pacifico', cursive;
+}
+
+#b-iot{
+    position:absolute;
+    top: 1460px;
+    right: 600px;
+    margin-bottom: 100px;
+}

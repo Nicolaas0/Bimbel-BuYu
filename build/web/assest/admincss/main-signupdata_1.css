@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*{
+    font-family: 'Heebo', sans-serif;
+
+}
+
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px rgb(143, 255, 115) solid;
+}
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.delete{
+    position: absolute;
+    top: 40px;
+    left: 1100px;
+}
+
+.create{
+    position: absolute;
+    top: 400px;
+    left: 20px;
+}
+
+.update{
+    position: absolute;
+    top: 190px;
+    left: 1100px;
+}

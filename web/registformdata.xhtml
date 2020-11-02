@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assest/admincss/main-signupdata_1.css" />
+
+        <title>Regist Form Data</title>
+    </h:head>
+
+    <h:body><h:outputStylesheet>
+            .table {
+            border-collapse: collapse;
+            width: 30%;
+            position: absolute;
+            top:20px;
+            left: 20px;
+            }
+
+            th, td {
+            padding: 30px 30px;
+            text-align: left;
+            border-bottom: 1px solid rgb(143, 255, 115);
+            font-family: 'Bree Serif', serif;
+            color: black;
+            font-size:15px;
+            font-family: 'Heebo', sans-serif;
+            }
+        </h:outputStylesheet>
+
+        <div class="table">
+
+            <h:dataTable value = "#{regist.getallrecords()}" var = "r"
+                         styleClass = "table">
+                <h:column>    				
+                    <f:facet name = "header">ID</f:facet>    				
+                        #{r.id}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Name</f:facet>
+                        #{r.name}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Address</f:facet>
+                        #{r.address}
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">No Telephone</f:facet>
+                        #{r.numtelp}
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">Sosmed</f:facet>
+                        #{r.sosmed}
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">Almamater</f:facet>
+                        #{r.univ}
+                </h:column>
+                <h:column>
+                    <f:facet name = "header">NIM</f:facet>
+                        #{r.nim}
+                </h:column>
+            </h:dataTable>
+        </div>
+        <h:form>
+            <div class="delete">
+                <label for="">Delete</label><br />
+                <label for="">ID</label>
+                <h:inputText value="#{regist.id}"/><br />
+                <h:commandButton value="Delete" action="#{regist.delete()}"></h:commandButton>
+            </div>
+        </h:form>
+        <h:form>
+            <div class="update">
+                <label for="">Update</label><br />
+                <label for="" >ID</label>
+                <h:inputText  value="#{regist.id}" /><br />
+                <h:commandButton action="#{regist.getbyid()}" value="Show"></h:commandButton><br />
+                <label for="">Name</label>
+                <h:inputText  value="#{regist.name}" /><br />
+                <label for="">Address</label>
+                <h:inputText  value="#{regist.address}" /><br />
+                <label for="">No telephone</label>
+                <h:inputText  value="#{regist.numtelp}" /><br />
+                <label for="">Sosmed</label>
+                <h:inputText  value="#{regist.sosmed}" /><br />
+                <label for="">Almamater</label>
+                <h:inputText  value="#{regist.univ}" /><br />
+                <label for="">NIM</label>
+                <h:inputText  value="#{regist.nim}" /><br />
+                <h:commandButton value="Update" action="#{regist.update()}"></h:commandButton>
+            </div>
+        </h:form>
+        <h:button value="Back" outcome="adminmenu.xhtml"></h:button>
+
+    </h:body></html>
+
+

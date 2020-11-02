@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=, initial-scale=1.0" />
+        <link rel="stylesheet" href="assest/admincss/main-adminlogin.css" />
+
+        <title>ADMIN LOGIN</title>
+    </h:head>
+
+    <h:body>
+
+        <h1>Admin Login</h1>
+
+        <div class="container">
+            <h:form>
+
+                <div class="usern">
+                    <label for="usern">Username</label><br />
+                    <h:inputText value="#{admin.username}" />
+                </div>
+
+                <div class="pass">
+                    <label for="pass">Password</label><br />
+                    <h:inputSecret value="#{admin.password}"  />
+                </div>
+                <h:commandButton action="#{admin.validatelogin()}" value="Login"></h:commandButton>
+            </h:form>
+        </div>
+
+    </h:body></html>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">    
+    <navigation-rule>
+        <from-view-id>signupdata.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{login.getbyid()}</from-action>
+            <to-view-id>/signupdata.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>jadwalkelasdata.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{jadwal.getbyid()}</from-action>
+            <to-view-id>/jadwalkelasdata.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>registformdata.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{regist.getbyid()}</from-action>
+            <to-view-id>/registformdata.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>form.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{regist.save()}</from-action>
+            <to-view-id>/after-form.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{login.validatelogin()}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/homepage_1.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{login.validatelogin()}</from-action>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/signup.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/login_error.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{admin.validatelogin}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/admin/dashboard.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{admin.validatelogin}</from-action>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/login_error.xhtml</to-view-id> 
+        </navigation-case>
+        <redirect/>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/admin/dashboard.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{admin.logout}</from-action>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <redirect/>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/adminlogin.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{admin.validatelogin()}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>adminmenu.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{admin.validatelogin()}</from-action>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+
+.body{
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 60px;
+    position:absolute;
+    top: 60px;
+    left: 600px;
+}
+
+.container{
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    border: 1px rgb(170, 170, 170) solid;
+    box-shadow: rgba(71, 255, 95, 0.281) 10px 10px 30px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+
+label{
+    font-family: 'Heebo', sans-serif;
+
+}
+
+input{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px black solid;
+    list-style-type: none;
+    background-color: white;
+}
+
+button{
+    margin-top: 9px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgb(71, 255, 95);
+    border: rgb(58, 255, 58);
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    left: 80px;
+}

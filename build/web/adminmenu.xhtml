@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assest/admincss/button-3d.css" />
+        <link rel="stylesheet" href="assest/admincss/main-adminmenu.css" />
+
+        <title>ADMIN MENU</title>
+    </h:head>
+
+    <h:body>
+        <h1>ADMIN MENU</h1>
+        <h:button value="Regist Form Data" outcome="registformdata.xhtml" id="button2" class="big-button" ></h:button>
+        <h:button value="Sign Up Data" outcome="signupdata.xhtml" id="button1" class="big-button" ></h:button>
+        <h:button value="Jadwal Siswa Data" outcome="jadwalkelasdata.xhtml" id="button3" class="big-button" ></h:button>
+        <h:button  id="btnlogout" value="logout" outcome="homepage.xhtml"></h:button>
+        <h:outputStylesheet>
+            #btnlogout{
+            position: absolute;
+            right: 1300px;
+            top: 20px;
+            }
+        </h:outputStylesheet>
+    </h:body></html>
